@@ -27,7 +27,6 @@ module Yammer
       if options.any?
         request_uri += "?#{create_query_string(options)}" unless http_method == :post
       end
-
       if http_method == :post
         handle_response(@access_token.send(http_method, request_uri, options))
       else
@@ -46,7 +45,7 @@ module Yammer
     def handle_response(response)
       # TODO: Write classes for exceptions
       case response.code.to_i
-        when 200..201
+        when 200..202
           response
         when 400
           raise "400 Bad request"

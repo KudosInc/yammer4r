@@ -28,6 +28,11 @@ module Yammer
       mash(parsed_response)
     end
 
+    def stream(action, params)
+      params.merge!(:resource => :streams)
+      yammer_request(action, params)
+    end
+
     # POST or DELETE a message
     def message(action, params)
       params.merge!(:resource => :messages)
