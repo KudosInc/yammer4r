@@ -10,7 +10,6 @@ Gem::Specification.new do |s|
   s.email    = 'workingpeter@gmail.com'
   s.homepage = 'http://github.com/pmoran/yammer4r'
 
-  s.has_rdoc = false
   s.files = %w(README
                example.rb
                oauth.yml.template
